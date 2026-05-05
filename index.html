@@ -546,7 +546,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -554,6 +553,8 @@
 
             .logo {
                 font-size: 1.3rem;
+                max-width: 120px;
+                line-height: 1.2;
             }
 
             .nav-links {
@@ -565,31 +566,50 @@
             }
 
             .hero {
-                padding: 3rem 1rem;
-                min-height: auto;
+                padding: 2rem 1rem;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .hero-content {
                 max-width: 100%;
+                margin-bottom: 100px;
             }
 
             .tagline {
-                font-size: 0.8rem;
-            }
-
-            h1 {
-                font-size: 2rem;
+                font-size: 0.75rem;
                 margin-bottom: 0.5rem;
             }
 
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+                line-height: 1.2;
+            }
+
             .hero-description {
-                font-size: 1rem;
+                font-size: 0.95rem;
                 margin-bottom: 1.5rem;
+                line-height: 1.5;
             }
 
             .cta-button {
                 padding: 0.8rem 1.5rem;
                 font-size: 0.9rem;
+            }
+
+            .hero-scroll {
+                position: fixed !important;
+                bottom: 20px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                z-index: 100 !important;
+            }
+
+            .hero-scroll p {
+                font-size: 0.8rem !important;
             }
 
             .about {
@@ -681,21 +701,31 @@
             }
 
             .logo {
-                font-size: 1rem;
+                font-size: 0.9rem;
+                max-width: 100px;
+                line-height: 1.1;
             }
 
             .tagline {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
             }
 
             .hero-description {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .cta-button {
                 padding: 0.7rem 1.2rem;
                 font-size: 0.85rem;
                 width: 100%;
+            }
+
+            .hero-scroll {
+                bottom: 15px !important;
+            }
+
+            .hero-scroll p {
+                font-size: 0.75rem !important;
             }
 
             .about {
