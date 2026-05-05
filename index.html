@@ -85,6 +85,10 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero::before {
@@ -102,6 +106,42 @@
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-30px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .hero-content {
@@ -483,6 +523,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
                 <li><a href="#hours">Hours</a></li>
                 <li><a href="#reviews">Reviews</a></li>
             </ul>
@@ -492,13 +533,17 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="tagline">Crafted Excellence</div>
-            <h1>Steak Sandwich Perfected</h1>
-            <p class="hero-description">Medium-rare steak, chimichurri sauce, fresh bread. Everything you need. Nothing you don't.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.doordash.com/store/stackhouse-steak-sandwich-vancouver-33182629/56385746/?event_type=autocomplete&pickup=false" target="_blank" class="cta-button">Order on DoorDash</a>
-                <a href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank" class="cta-button">Order on Uber Eats</a>
+            <div class="tagline" style="animation: fadeInDown 0.8s ease 0.2s both;">STEAK SANDWICH PERFECTED</div>
+            <h1 style="animation: fadeInDown 0.8s ease 0.4s both;">Stackhouse</h1>
+            <p class="hero-description" style="animation: fadeInDown 0.8s ease 0.6s both;">Medium-rare steak. Fresh bread. Signature chimichurri.<br>Crafted with precision. Served with care.</p>
+            <div style="animation: fadeInUp 0.8s ease 0.8s both; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#order" class="cta-button">Order Now</a>
+                <a href="#menu" class="cta-button" style="background: transparent; color: var(--primary-accent); border: 2px solid var(--primary-accent);">View Menu</a>
             </div>
+        </div>
+        <div class="hero-scroll" style="animation: fadeIn 1.2s ease 1.2s both; position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); text-align: center; color: rgba(250, 247, 243, 0.6);">
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Scroll to explore</p>
+            <div style="font-size: 1.5rem; animation: bounce 2s infinite;">↓</div>
         </div>
     </section>
 
@@ -510,7 +555,21 @@
             <p>We use tender, medium-rare steak with fresh bread and our signature chimichurri sauce. Every ingredient is selected for quality and flavor. Every sandwich is made with precision.</p>
             <p>It's simple. It's fresh. It's unforgettable.</p>
         </div>
-        <div class="about-image"></div>
+        <div class="about-image" style="background: none; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
+            <img src="sandwich.jpg" alt="Stackhouse Steak Sandwich" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order" style="background: linear-gradient(135deg, var(--primary-dark) 0%, #2a1f16 100%); color: var(--cream); padding: 5rem 2rem; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; color: var(--cream);">Ready to Order?</h2>
+            <p style="font-size: 1.05rem; margin-bottom: 2rem; color: rgba(250, 247, 243, 0.9);">Order for delivery or pickup from your favorite platform</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.doordash.com/store/stackhouse-steak-sandwich-vancouver-33182629/56385746/?event_type=autocomplete&pickup=false" target="_blank" style="background: var(--primary-accent); color: var(--primary-dark); padding: 1rem 2.5rem; text-decoration: none; font-family: 'Space Mono', monospace; font-weight: 700; letter-spacing: 1px; border: 2px solid var(--primary-accent); border-radius: 2px; display: inline-block; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='var(--primary-dark)'; this.style.color='var(--primary-accent)';" onmouseout="this.style.background='var(--primary-accent)'; this.style.color='var(--primary-dark)';">Order on DoorDash</a>
+                <a href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank" style="background: var(--primary-accent); color: var(--primary-dark); padding: 1rem 2.5rem; text-decoration: none; font-family: 'Space Mono', monospace; font-weight: 700; letter-spacing: 1px; border: 2px solid var(--primary-accent); border-radius: 2px; display: inline-block; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='var(--primary-dark)'; this.style.color='var(--primary-accent)';" onmouseout="this.style.background='var(--primary-accent)'; this.style.color='var(--primary-dark)';">Order on Uber Eats</a>
+            </div>
+        </div>
     </section>
 
     <!-- Expansion Banner -->
