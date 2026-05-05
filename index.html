@@ -77,6 +77,67 @@
             color: var(--primary-accent);
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--cream);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--primary-dark);
+            flex-direction: column;
+            padding: 2rem;
+            gap: 1.5rem;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--cream);
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(250, 247, 243, 0.1);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary-dark) 0%, #2a1f16 100%);
@@ -488,35 +549,210 @@
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
             }
 
             .nav-links {
-                gap: 1rem;
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+                min-height: auto;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .tagline {
                 font-size: 0.8rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
             }
 
             .about {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                padding: 2rem 1rem;
             }
 
-            .hero {
-                padding: 4rem 1rem;
+            .about-text h2 {
+                font-size: 1.8rem;
             }
 
-            .info-grid {
-                grid-template-columns: 1fr;
+            .about-image {
+                height: 300px;
+            }
+
+            .menu {
+                padding: 3rem 1rem;
+            }
+
+            .menu-header h2 {
+                font-size: 1.8rem;
             }
 
             .menu-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .menu-category {
+                padding: 1.5rem;
+            }
+
+            .menu-category h3 {
+                font-size: 1.2rem;
+            }
+
+            .info {
+                padding: 2rem 1rem;
+            }
+
+            .info h2 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .info-card {
+                padding: 1.5rem;
+            }
+
+            .reviews {
+                padding: 3rem 1rem;
+            }
+
+            .reviews h2 {
+                font-size: 1.8rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .review-card {
+                padding: 1.5rem;
+            }
+
+            .order {
+                padding: 3rem 1rem !important;
+            }
+
+            header {
+                padding: 1rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .tagline {
+                font-size: 0.7rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+                width: 100%;
+            }
+
+            .about {
+                padding: 1.5rem 1rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-text p {
+                font-size: 0.95rem;
+            }
+
+            .menu-category h3 {
+                font-size: 1rem;
+            }
+
+            .menu-item-name {
+                font-size: 1rem;
+            }
+
+            .menu-item-desc {
+                font-size: 0.85rem;
+            }
+
+            .menu-item-price {
+                font-size: 0.9rem;
+            }
+
+            .info h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-card h3 {
+                font-size: 1rem;
+            }
+
+            .info-card p {
+                font-size: 0.9rem;
+            }
+
+            .reviews h2 {
+                font-size: 1.5rem;
+            }
+
+            .review-text {
+                font-size: 0.9rem;
+            }
+
+            .review-author {
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <header>
         <nav>
             <div class="logo">STACKHOUSE STEAK SANDWICH</div>
@@ -527,8 +763,44 @@
                 <li><a href="#hours">Hours</a></li>
                 <li><a href="#reviews">Reviews</a></li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+        <a href="#order" onclick="closeMobileMenu()">Order</a>
+        <a href="#hours" onclick="closeMobileMenu()">Hours</a>
+        <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        function closeMobileMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header') && !event.target.closest('.mobile-menu')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 
     <!-- Hero -->
     <section class="hero">
