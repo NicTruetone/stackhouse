@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackhouse Steak Sandwich | Vancouver</title>
-    <meta name="description" content="Vancouver's home for perfectly crafted steak sandwiches. Medium-rare steak, fresh bread, signature chimichurri.">
+    <title>Hours & Location | Stackhouse Steak Sandwich</title>
+    <meta name="description" content="Visit Stackhouse at 1102 Davie Street, Vancouver. Open daily 10am-8pm. Also at Richmond Night Market Booth F35.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,7 +16,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="order.html">Order</a></li>
-                <li><a href="hours.html">Hours</a></li>
+                <li><a href="hours.html" class="active">Hours</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -51,35 +51,36 @@
         });
     </script>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="tagline" style="animation: fadeInDown 0.8s ease 0.2s both;">STEAK SANDWICH PERFECTED</div>
-            <h1 style="animation: fadeInDown 0.8s ease 0.4s both;">Stackhouse Steak Sandwich</h1>
-            <p class="hero-description" style="animation: fadeInDown 0.8s ease 0.6s both;">Medium-rare steak. Fresh bread. Signature chimichurri.<br>Crafted with precision. Served with care.</p>
-            <div style="animation: fadeInUp 0.8s ease 0.8s both; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="order.html" class="cta-button">Order Now</a>
-                <a href="menu.html" class="cta-button" style="background: transparent; color: var(--primary-accent); border: 2px solid var(--primary-accent);">View Menu</a>
+    <div class="page-header">
+        <h1>Visit Us</h1>
+        <p>Hours & Location</p>
+    </div>
+    <section class="info page-body">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Main Location</h3>
+                <p><strong>Davie Village</strong><br>1102 Davie Street<br>Vancouver, BC V6E 1X4<br><br>Small space, limited seating<br>Cozy & welcoming</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Expansion Banner -->
-    <section style="background: linear-gradient(135deg, var(--primary-accent) 0%, #d97d5e 100%); color: var(--cream); padding: 2rem; text-align: center; margin: 0;">
-        <h3 style="font-family: 'IBM Plex Mono', monospace; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem;">Now at Richmond Night Market</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Visit us at <strong>Booth F35</strong></p>
-        <p style="font-size: 0.95rem; opacity: 0.95;">Hotteok - Crispy exterior with molten, gooey brown sugar and cinnamon filling</p>
-    </section>
-
-    <!-- About preview -->
-    <section class="about">
-        <div class="about-text">
-            <h2>Crafted with Care</h2>
-            <p>Stackhouse is a small sandwich shop on Davie Street in Vancouver, dedicated to doing one thing extraordinarily well: steak sandwiches.</p>
-            <p>We use tender, medium-rare steak with fresh bread and our signature chimichurri sauce. Every ingredient is selected for quality and flavor.</p>
-            <a href="about.html" class="cta-button" style="margin-top: 1rem;">Our Story</a>
-        </div>
-        <div class="about-image" style="background: none; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
-            <img src="sandwich.jpg?v=1" alt="Stackhouse Steak Sandwich" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="info-card">
+                <h3>Richmond Night Market</h3>
+                <p><strong>Booth F35</strong><br>Seasonal pop-up<br><br>Hotteok<br>Crispy exterior with molten, gooey brown sugar and cinnamon filling</p>
+            </div>
+            <div class="info-card">
+                <h3>Hours</h3>
+                <div class="hours-list">
+                    <div><span class="day">Daily</span><span class="time">10am &ndash; 8pm</span></div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(139, 134, 128, 0.3);">
+                        <span class="day">Richmond Market</span>
+                    </div>
+                    <div><span class="time" style="color: var(--warm-gray);">Seasonal</span></div>
+                </div>
+            </div>
+            <div class="info-card">
+                <h3>Contact & Order</h3>
+                <p><a href="tel:+17788863522" style="color: var(--primary-accent); text-decoration: none; font-weight: 600;">(778) 886-3522</a><br><br>
+                <a href="https://www.instagram.com/stackhouse_steaksandwich/" target="_blank" style="color: var(--primary-accent); text-decoration: none; font-weight: 600;">Instagram</a><br>
+                <a href="order.html" style="color: var(--primary-accent); text-decoration: none; font-weight: 600;">Order Online</a></p>
+            </div>
         </div>
     </section>
 

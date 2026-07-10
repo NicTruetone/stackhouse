@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Stackhouse Steak Sandwich</title>
+    <meta name="description" content="Breakfast sandwiches, signature steak sandwiches, sides, drinks & more. Vancouver.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo" style="text-decoration:none;color:inherit;">STACKHOUSE STEAK SANDWICH</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="hours.html">Hours</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="hours.html">Hours</a>
+        <a href="reviews.html">Reviews</a>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header') && !event.target.closest('.mobile-menu')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+    <div class="page-header">
+        <h1>Menu</h1>
+        <p>What We Serve</p>
+    </div>
+    <section class="menu page-body" style="margin-top:0;">
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Breakfast Sandwiches</h3>
+                <div class="menu-item"><div class="menu-item-name">Bacon & Egg Sandwich</div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-name">BBQ Pulled Pork & Egg Sandwich</div><div class="menu-item-price">$7</div></div>
+                <div class="menu-item"><div class="menu-item-name">Steak & Egg Sandwich</div><div class="menu-item-price">$9</div></div>
+                <div class="menu-item"><div class="menu-item-name">Steak, Bacon & Egg Sandwich</div><div class="menu-item-price">$10</div></div>
+                <div class="menu-item-desc" style="margin-top:1rem;">All on brioche with fluffy souffle egg, cheddar & mayo</div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Signature Sandwiches</h3>
+                <div class="menu-item"><div class="menu-item-name">BBQ Pulled Pork Sandwich</div><div class="menu-item-desc">Coleslaw, sweet & spicy, onion chips</div><div class="menu-item-price">$13</div></div>
+                <div class="menu-item"><div class="menu-item-name">Stackhouse Steak Sandwich</div><div class="menu-item-desc">Med-rare steak, crispy onion, chimichurri sauce</div><div class="menu-item-price">$15</div></div>
+                <div class="menu-item"><div class="menu-item-name">Steak TarTare Open Sandwich</div><div class="menu-item-desc">Raw, dijon, crushed capers, parsley, red onion</div><div class="menu-item-price">$15</div></div>
+                <div class="menu-item"><div class="menu-item-name">Chicken Dip Sandwich</div><div class="menu-item-desc">Chicken jus, horseradish, cheese, chicken skin crackling</div><div class="menu-item-price">$16</div></div>
+                <div class="menu-item"><div class="menu-item-name">Beef Dip Sandwich</div><div class="menu-item-desc">Beef jus, brisket, horseradish, cheese, onion chip</div><div class="menu-item-price">$18</div></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Sides</h3>
+                <div class="menu-item"><div class="menu-item-name">Caesar Salad</div><div class="menu-item-desc">White anchovy, crouton, housemade dressing &mdash; add chicken $5</div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-name">French Onion Soup</div><div class="menu-item-desc">Caramelized onion, swiss cheese, crouton, beef broth</div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-name">Smashed Potato</div><div class="menu-item-desc">Smashed instead mashed</div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-name">Potato Chips</div><div class="menu-item-desc">Truffle aioli</div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-name">Vegetable Pickles</div><div class="menu-item-desc">Cauliflower, gerkins, red onion</div><div class="menu-item-price">$5</div></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Drinks</h3>
+                <div class="menu-item"><div class="menu-item-name">Americano</div><div class="menu-item-price">$3.50</div></div>
+                <div class="menu-item"><div class="menu-item-name">Hot Chocolate & Tea</div><div class="menu-item-price">$3.50</div></div>
+                <div class="menu-item"><div class="menu-item-name">Latte, Cappuccino</div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-name">Pop, Water</div><div class="menu-item-price">$3</div></div>
+                <div class="menu-item"><div class="menu-item-name">Sparkling Water</div><div class="menu-item-price">$4</div></div>
+                <div class="menu-item"><div class="menu-item-name">Zero Proof Beer</div><div class="menu-item-price">$6</div></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Sweet</h3>
+                <div class="menu-item"><div class="menu-item-name">Cheesecake</div><div class="menu-item-desc">In jar &mdash; add strawberry $2</div><div class="menu-item-price">$7</div></div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Richmond Night Market</h3>
+                <div class="menu-item"><div class="menu-item-name">Hotteok</div><div class="menu-item-desc">Crispy exterior with molten, gooey brown sugar and cinnamon filling. Seasonal &mdash; Booth F35</div></div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+            <a href="order.html" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="tel:+17788863522">Call</a>
+            <a href="https://www.instagram.com/stackhouse_steaksandwich/" target="_blank">Instagram</a>
+            <a href="https://www.doordash.com/store/stackhouse-steak-sandwich-vancouver-33182629/56385746/?event_type=autocomplete&pickup=false" target="_blank">DoorDash</a>
+            <a href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank">Uber Eats</a>
+        </div>
+        <div class="footer-text">
+            1102 Davie Street, Vancouver, BC &bull; (778) 886-3522
+        </div>
+        <div class="footer-text">
+            &copy; 2026 Stackhouse Steak Sandwich. Handcrafted with care.
+        </div>
+    </footer>
+</body>
+</html>
