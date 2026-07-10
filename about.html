@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Stackhouse Steak Sandwich</title>
+    <meta name="description" content="The story behind Stackhouse Steak Sandwich on Davie Street, Vancouver.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo" style="text-decoration:none;color:inherit;">STACKHOUSE STEAK SANDWICH</a>
+            <ul class="nav-links">
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="hours.html">Hours</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="hours.html">Hours</a>
+        <a href="reviews.html">Reviews</a>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header') && !event.target.closest('.mobile-menu')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+    <div class="page-header">
+        <h1>Our Story</h1>
+        <p>Crafted with Care</p>
+    </div>
+    <section class="about page-body">
+        <div class="about-text">
+            <h2>Crafted with Care</h2>
+            <p>Stackhouse is a small sandwich shop on Davie Street in Vancouver, dedicated to doing one thing extraordinarily well: steak sandwiches.</p>
+            <p>We use tender, medium-rare steak with fresh bread and our signature chimichurri sauce. Every ingredient is selected for quality and flavor. Every sandwich is made with precision.</p>
+            <p>It's simple. It's fresh. It's unforgettable.</p>
+            <a href="menu.html" class="cta-button" style="margin-top: 1rem;">See the Menu</a>
+        </div>
+        <div class="about-image" style="background: none; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
+            <img src="sandwich.jpg?v=1" alt="Stackhouse Steak Sandwich" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="tel:+17788863522">Call</a>
+            <a href="https://www.instagram.com/stackhouse_steaksandwich/" target="_blank">Instagram</a>
+            <a href="https://www.doordash.com/store/stackhouse-steak-sandwich-vancouver-33182629/56385746/?event_type=autocomplete&pickup=false" target="_blank">DoorDash</a>
+            <a href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank">Uber Eats</a>
+        </div>
+        <div class="footer-text">
+            1102 Davie Street, Vancouver, BC &bull; (778) 886-3522
+        </div>
+        <div class="footer-text">
+            &copy; 2026 Stackhouse Steak Sandwich. Handcrafted with care.
+        </div>
+    </footer>
+</body>
+</html>
