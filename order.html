@@ -54,7 +54,7 @@
             background: rgba(250, 247, 243, 0.04);
             border: 1px solid rgba(250, 247, 243, 0.12);
             border-radius: 10px;
-            padding: 2.25rem 1.5rem;
+            padding: 1.75rem 1.5rem;
             transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
         }
         .order-card:hover {
@@ -62,11 +62,21 @@
             border-color: var(--primary-accent);
             background: rgba(196, 98, 61, 0.08);
         }
-        .order-card .platform {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--cream);
-            margin-bottom: 0.4rem;
+        .order-logo {
+            height: 88px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .order-logo.dd { background: #ffffff; }
+        .order-logo.ue { background: #58be72; }
+        .order-logo img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
         }
         .order-card .action {
             font-family: 'IBM Plex Mono', monospace;
@@ -74,6 +84,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--primary-accent);
+            text-align: center;
         }
         .order-divider {
             display: flex;
@@ -162,11 +173,11 @@
             <h1 class="order-title">Ready to Order?</h1>
             <div class="order-cards">
                 <a class="order-card" href="https://www.doordash.com/store/stackhouse-steak-sandwich-vancouver-33182629/56385746/?event_type=autocomplete&pickup=false" target="_blank">
-                    <div class="platform">DoorDash</div>
+                    <div class="order-logo dd"><img src="doordash-logo.png" alt="DoorDash"></div>
                     <div class="action">Order Now &rarr;</div>
                 </a>
                 <a class="order-card" href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank">
-                    <div class="platform">Uber Eats</div>
+                    <div class="order-logo ue"><img src="ubereats-logo.png" alt="Uber Eats"></div>
                     <div class="action">Order Now &rarr;</div>
                 </a>
             </div>
