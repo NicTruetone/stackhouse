@@ -7,6 +7,50 @@
     <meta name="description" content="Vancouver's home for perfectly crafted steak sandwiches. Medium-rare steak, fresh bread, signature chimichurri.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Full-bleed photo hero */
+        .hero {
+            background: linear-gradient(rgba(26, 20, 16, 0.60), rgba(26, 20, 16, 0.74)), url('sandwich.jpg?v=1') center/cover no-repeat;
+            padding: 8rem 2rem;
+        }
+        .hero::before { display: none; }
+        .hero-description { color: rgba(250, 247, 243, 0.92); }
+
+        /* More breathing room */
+        .about { margin: 7rem auto; }
+
+        /* Toned-down Richmond Night Market banner */
+        .nightmarket-banner {
+            background: #241a12;
+            color: var(--cream);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(196, 98, 61, 0.3);
+            border-bottom: 1px solid rgba(196, 98, 61, 0.3);
+        }
+        .nightmarket-banner .eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: var(--primary-accent);
+            margin-bottom: 0.85rem;
+        }
+        .nightmarket-banner h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: var(--cream);
+        }
+        .nightmarket-banner p {
+            color: rgba(250, 247, 243, 0.72);
+            font-size: 0.98rem;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -58,16 +102,16 @@
             <p class="hero-description" style="animation: fadeInDown 0.8s ease 0.6s both;">Medium-rare steak. Fresh bread. Signature chimichurri.<br>Crafted with precision. Served with care.</p>
             <div style="animation: fadeInUp 0.8s ease 0.8s both; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="order.html" class="cta-button">Order Now</a>
-                <a href="menu.html" class="cta-button" style="background: transparent; color: var(--primary-accent); border: 2px solid var(--primary-accent);">View Menu</a>
+                <a href="menu.html" class="cta-button" style="background: transparent; color: var(--cream); border: 2px solid rgba(250, 247, 243, 0.5);">View Menu</a>
             </div>
         </div>
     </section>
 
-    <!-- Expansion Banner -->
-    <section style="background: linear-gradient(135deg, var(--primary-accent) 0%, #d97d5e 100%); color: var(--cream); padding: 2rem; text-align: center; margin: 0;">
-        <h3 style="font-family: 'IBM Plex Mono', monospace; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem;">Now at Richmond Night Market</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Visit us at <strong>Booth F35</strong></p>
-        <p style="font-size: 0.95rem; opacity: 0.95;">Hotteok - Crispy exterior with molten, gooey brown sugar and cinnamon filling</p>
+    <!-- Richmond Night Market Banner -->
+    <section class="nightmarket-banner">
+        <div class="eyebrow">Now at Richmond Night Market</div>
+        <h3>Booth F35</h3>
+        <p>Hotteok &mdash; crispy exterior with a molten, gooey brown sugar and cinnamon filling</p>
     </section>
 
     <!-- About preview -->
