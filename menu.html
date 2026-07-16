@@ -7,6 +7,38 @@
     <meta name="description" content="Breakfast sandwiches, signature steak sandwiches, sides, drinks & more. Vancouver.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-photos {
+            max-width: 1200px;
+            margin: 0 auto 3.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .menu-photo {
+            margin: 0;
+        }
+        .menu-photo img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 4px 18px rgba(26, 20, 16, 0.12);
+        }
+        .menu-photo figcaption {
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--warm-gray);
+            margin-top: 0.65rem;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .menu-photos { grid-template-columns: 1fr; gap: 1.5rem; }
+            .menu-photo img { height: 260px; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -56,6 +88,20 @@
         <p>What We Serve</p>
     </div>
     <section class="menu page-body" style="margin-top:0;">
+        <div class="menu-photos">
+            <figure class="menu-photo">
+                <img src="steak-tartare.png" alt="Steak TarTare Open Sandwich">
+                <figcaption>Steak TarTare Open Sandwich</figcaption>
+            </figure>
+            <figure class="menu-photo">
+                <img src="caesar-salad.png" alt="Caesar Salad">
+                <figcaption>Caesar Salad</figcaption>
+            </figure>
+            <figure class="menu-photo">
+                <img src="french-onion-soup.png" alt="French Onion Soup">
+                <figcaption>French Onion Soup</figcaption>
+            </figure>
+        </div>
         <div class="menu-grid">
             <div class="menu-category">
                 <h3>Breakfast Sandwiches</h3>
