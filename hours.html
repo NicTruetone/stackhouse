@@ -6,7 +6,41 @@
     <title>Hours & Location | Stackhouse Steak Sandwich</title>
     <meta name="description" content="Visit Stackhouse at 1102 Davie Street, Vancouver. Open daily 10am-8pm. Also at Richmond Night Market Booth F35.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .loc-address {
+            color: var(--warm-gray);
+            font-size: 0.92rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+        .loc-address strong { color: var(--primary-dark); }
+        .hours-week {
+            max-width: 240px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .hours-week div {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.35rem 0;
+            border-bottom: 1px solid rgba(139, 134, 128, 0.15);
+        }
+        .hours-week div:last-child { border-bottom: none; }
+        .hours-week .day {
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+        .hours-week .time {
+            color: var(--warm-gray);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.82rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -53,27 +87,33 @@
 
     <div class="page-header">
         <h1>Visit Us</h1>
-        <p>Hours & Location</p>
+        <p>Locations & Hours</p>
     </div>
     <section class="info page-body">
         <div class="info-grid">
             <div class="info-card">
-                <h3>Main Location</h3>
-                <p><strong>Davie Village</strong><br>1102 Davie Street<br>Vancouver, BC V6E 1X4<br><br>Small space, limited seating<br>Cozy & welcoming</p>
+                <h3>Davie Village</h3>
+                <p class="loc-address"><strong>1102 Davie Street</strong><br>Vancouver, BC V6E 1X4</p>
+                <div class="hours-week">
+                    <div><span class="day">Every day</span><span class="time">10am-8pm</span></div>
+                </div>
+            </div>
+            <div class="info-card">
+                <h3>Gastown</h3>
+                <p class="loc-address"><strong>435 Abbott Street</strong><br>Vancouver, BC V6B 1G8</p>
+                <div class="hours-week">
+                    <div><span class="day">Monday</span><span class="time">8am-4pm</span></div>
+                    <div><span class="day">Tuesday</span><span class="time">8am-4pm</span></div>
+                    <div><span class="day">Wednesday</span><span class="time">8am-6pm</span></div>
+                    <div><span class="day">Thursday</span><span class="time">8am-6pm</span></div>
+                    <div><span class="day">Friday</span><span class="time">8am-4pm</span></div>
+                    <div><span class="day">Saturday</span><span class="time">10am-4pm</span></div>
+                    <div><span class="day">Sunday</span><span class="time">10am-4pm</span></div>
+                </div>
             </div>
             <div class="info-card">
                 <h3>Richmond Night Market</h3>
                 <p><strong>Booth F35</strong><br>Seasonal pop-up<br><br>Hotteok<br>Crispy exterior with molten, gooey brown sugar and cinnamon filling</p>
-            </div>
-            <div class="info-card">
-                <h3>Hours</h3>
-                <div class="hours-list">
-                    <div><span class="day">Daily</span><span class="time">10am &ndash; 8pm</span></div>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(139, 134, 128, 0.3);">
-                        <span class="day">Richmond Market</span>
-                    </div>
-                    <div><span class="time" style="color: var(--warm-gray);">Seasonal</span></div>
-                </div>
             </div>
             <div class="info-card">
                 <h3>Contact & Order</h3>
@@ -92,10 +132,10 @@
             <a href="https://www.ubereats.com/ca/store/stackhouse-steaksandwich/ecouAs_ZU3mbk9xz7SRgxw?diningMode=DELIVERY&surfaceName=" target="_blank">Uber Eats</a>
         </div>
         <div class="footer-text">
-            1102 Davie Street, Vancouver, BC &bull; (778) 886-3522
+            Davie Village, 1102 Davie Street  &middot;  Gastown, 435 Abbott Street  &middot;  Vancouver, BC
         </div>
         <div class="footer-text">
-            &copy; 2026 Stackhouse Steak Sandwich. Handcrafted with care.
+            (778) 886-3522  &middot;  &copy; 2026 Stackhouse Steak Sandwich
         </div>
     </footer>
 </body>
