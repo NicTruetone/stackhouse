@@ -227,11 +227,11 @@
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 1rem;
-            letter-spacing: -2px;
+            letter-spacing: 0.5px;
             line-height: 1.1;
             color: var(--cream);
         }
@@ -288,7 +288,7 @@
         }
 
         .about-text h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 2rem;
             margin-bottom: 1.5rem;
             color: var(--primary-dark);
@@ -340,7 +340,7 @@
         }
 
         .menu-header h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--primary-dark);
@@ -369,7 +369,7 @@
         }
 
         .menu-category h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 1.25rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
@@ -418,7 +418,7 @@
         }
 
         .info h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 2rem;
             text-align: center;
             margin-bottom: 3.5rem;
@@ -441,7 +441,7 @@
         }
 
         .info-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 1.15rem;
             color: var(--primary-dark);
             margin-bottom: 1.25rem;
@@ -483,7 +483,7 @@
         }
 
         .reviews h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 2rem;
             text-align: center;
             margin-bottom: 3rem;
@@ -813,10 +813,10 @@
         }
 
         .page-header h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Anton', sans-serif;
             font-size: 2.4rem;
             font-weight: 900;
-            letter-spacing: -1px;
+            letter-spacing: 0.5px;
             color: var(--primary-dark);
             margin-bottom: 1rem;
         }
