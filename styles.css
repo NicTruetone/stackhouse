@@ -10,9 +10,10 @@
             --cream: #faf7f3;
             --brand: #fae666;
             --bg: #faf7f1;
+            --beige: #e6ddcd;
             --gold: #d9a441;
             --warm-gray: #6b655c;
-            --light-gray: #f4efe6;
+            --light-gray: #e6ddcd;
         }
 
         html {
@@ -29,14 +30,14 @@
 
         /* Header & Navigation */
         header {
-            background: #ffffff;
+            background: var(--beige);
             color: var(--primary-dark);
             padding: 0.9rem 2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
             border-top: 4px solid var(--brand);
-            border-bottom: 1px solid rgba(26, 20, 16, 0.08);
+            border-bottom: 1px solid rgba(26, 20, 16, 0.1);
             box-shadow: 0 1px 12px rgba(26, 20, 16, 0.05);
         }
 
@@ -111,13 +112,13 @@
             top: 60px;
             left: 0;
             right: 0;
-            background: #ffffff;
+            background: var(--beige);
             flex-direction: column;
             padding: 2rem;
             gap: 1.5rem;
             z-index: 999;
             box-shadow: 0 8px 20px rgba(26, 20, 16, 0.12);
-            border-bottom: 1px solid rgba(26, 20, 16, 0.08);
+            border-bottom: 1px solid rgba(26, 20, 16, 0.1);
         }
 
         .mobile-menu.active {
