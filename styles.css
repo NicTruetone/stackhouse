@@ -805,8 +805,8 @@
 
         /* ===== Multi-page additions ===== */
         .nav-links a.active {
-            color: var(--primary-dark);
-            border-bottom-color: var(--primary-dark);
+            color: var(--brand);
+            border-bottom-color: var(--brand);
         }
 
         .page-header {
