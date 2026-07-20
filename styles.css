@@ -9,7 +9,7 @@
             --primary-accent: #c4623d;
             --cream: #faf7f3;
             --brand: #fae666;
-            --bg: #faf7f1;
+            --bg: #fbf4c8;
             --beige: #e6ddcd;
             --gold: #d9a441;
             --warm-gray: #6b655c;
@@ -805,8 +805,11 @@
 
         /* ===== Multi-page additions ===== */
         .nav-links a.active {
-            color: var(--brand);
-            border-bottom-color: var(--brand);
+            color: var(--primary-dark);
+            border-bottom: none;
+            outline: 2px solid var(--brand);
+            border-radius: 4px;
+            padding: 0.25rem 0.6rem;
         }
 
         .page-header {
