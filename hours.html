@@ -19,7 +19,7 @@
         .loc-address strong { color: var(--primary-dark); }
         .hours-week {
             max-width: 240px;
-            margin: 0 auto;
+            margin: 0;
             text-align: left;
         }
         .hours-week div {
@@ -39,6 +39,11 @@
             color: var(--warm-gray);
             font-family: 'IBM Plex Mono', monospace;
             font-size: 0.82rem;
+        }
+        @media (max-width: 700px) {
+            div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -85,42 +90,55 @@
         });
     </script>
 
-    <div class="page-header">
+    <div class="page-header" style="padding: 2.5rem 2rem 2rem;">
         <h1>Visit Us</h1>
         <p>Locations & Hours</p>
     </div>
+
     <section class="info page-body">
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>Davie Village</h3>
-                <p class="loc-address"><strong>1102 Davie Street</strong><br>Vancouver, BC V6E 1X4</p>
-                <div class="hours-week">
-                    <div><span class="day">Every day</span><span class="time">10am-8pm</span></div>
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+
+            <!-- Row 1: Two main locations -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="info-card" style="text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Davie Village</h3>
+                    <p class="loc-address"><strong>1102 Davie Street</strong><br>Vancouver, BC V6E 1X4</p>
+                    <div class="hours-week">
+                        <div><span class="day">Every day</span><span class="time">10am-8pm</span></div>
+                    </div>
+                </div>
+                <div class="info-card" style="text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Gastown</h3>
+                    <p class="loc-address"><strong>435 Abbott Street</strong><br>Vancouver, BC V6B 1G8</p>
+                    <div class="hours-week">
+                        <div><span class="day">Monday</span><span class="time">8am-4pm</span></div>
+                        <div><span class="day">Tuesday</span><span class="time">8am-4pm</span></div>
+                        <div><span class="day">Wednesday</span><span class="time">8am-6pm</span></div>
+                        <div><span class="day">Thursday</span><span class="time">8am-6pm</span></div>
+                        <div><span class="day">Friday</span><span class="time">8am-4pm</span></div>
+                        <div><span class="day">Saturday</span><span class="time">10am-4pm</span></div>
+                        <div><span class="day">Sunday</span><span class="time">10am-4pm</span></div>
+                    </div>
                 </div>
             </div>
-            <div class="info-card">
-                <h3>Gastown</h3>
-                <p class="loc-address"><strong>435 Abbott Street</strong><br>Vancouver, BC V6B 1G8</p>
-                <div class="hours-week">
-                    <div><span class="day">Monday</span><span class="time">8am-4pm</span></div>
-                    <div><span class="day">Tuesday</span><span class="time">8am-4pm</span></div>
-                    <div><span class="day">Wednesday</span><span class="time">8am-6pm</span></div>
-                    <div><span class="day">Thursday</span><span class="time">8am-6pm</span></div>
-                    <div><span class="day">Friday</span><span class="time">8am-4pm</span></div>
-                    <div><span class="day">Saturday</span><span class="time">10am-4pm</span></div>
-                    <div><span class="day">Sunday</span><span class="time">10am-4pm</span></div>
+
+            <!-- Row 2: Richmond + Contact -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="info-card" style="text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Richmond Night Market</h3>
+                    <p class="loc-address"><strong>Booth F35</strong><br>Seasonal pop-up</p>
+                    <p style="font-size: 0.95rem; color: var(--warm-gray); line-height: 1.6;">Hotteok. Crispy exterior with molten, gooey brown sugar and cinnamon filling.</p>
+                </div>
+                <div class="info-card" style="text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Contact & Order</h3>
+                    <p style="line-height: 2.2;">
+                        <a href="tel:+17788863522" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">(778) 886-3522</a><br>
+                        <a href="https://www.instagram.com/stackhouse_steaksandwich/" target="_blank" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Instagram</a><br>
+                        <a href="order.html" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Order Online</a>
+                    </p>
                 </div>
             </div>
-            <div class="info-card">
-                <h3>Richmond Night Market</h3>
-                <p><strong>Booth F35</strong><br>Seasonal pop-up<br><br>Hotteok<br>Crispy exterior with molten, gooey brown sugar and cinnamon filling</p>
-            </div>
-            <div class="info-card">
-                <h3>Contact & Order</h3>
-                <p><a href="tel:+17788863522" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">(778) 886-3522</a><br><br>
-                <a href="https://www.instagram.com/stackhouse_steaksandwich/" target="_blank" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Instagram</a><br>
-                <a href="order.html" style="color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Order Online</a></p>
-            </div>
+
         </div>
     </section>
 
