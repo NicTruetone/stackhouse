@@ -50,10 +50,11 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 900;
-            letter-spacing: -1px;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .nav-links {
